@@ -1,0 +1,76 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.ibb.co.com/72nWN0B/DALL-E-2024-11-17-11-51-10-A-vibrant-group-career-workshop-A-room-filled-with-young-professionals-en.webp",
+      "serviceName": "Career Counseling Sessions",
+      "category": "Online",
+      "description": "Personalized one-on-one sessions to guide you in choosing the right career path.",
+      "pricing": "$50 per session",
+      "duration": "05-12-24 5:00 PM - 6:00 PM",
+      "counselor": "Dr. Sarah Thompson",
+      "rating": 4.8
+      
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co.com/gSLR5fp/DALL-E-2024-11-17-11-51-07-An-image-depicting-a-resume-review-session-A-career-coach-is-sitting-at-a.webp",
+      "serviceName": "Career Coaching & Mentoring",
+      "category": "Online",
+      "description": "Get your resume reviewed by experts to stand out in the job market.",
+      "pricing": "$30 per review",
+      "duration": "Available on-demand",
+      "counselor": "John Carter",
+      "rating": 4.7
+      
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co.com/qR7tRM0/DALL-E-2024-11-17-11-51-04-A-professional-and-modern-image-representing-career-counseling-It-include.webp",
+      "serviceName": "Group Career Workshops",
+      "category": "Offline",
+      "description": "Interactive workshops to help you identify career goals and build confidence.",
+      "pricing": "$20 per attendee",
+      "duration": "10-12-24 3:00 PM - 5:00 PM",
+      "counselor": "Ms. Emily Roberts",
+      "rating": 4.9
+      
+    },
+    {
+        "id": 4,
+        "image": "https://i.ibb.co.com/6yg8T29/consulting-firm.webp",
+        "serviceName": "Career Coaching Sessions",
+        "category": "Online",
+        "description": "Get personalized coaching sessions to develop your career strategy.",
+        "pricing": "$75 per session",
+        "duration": "Available upon request",
+        "counselor": "Michael Brown",
+        "rating": 5.0
+    
+      },
+      {
+        "id": 5,
+        "image": "https://i.ibb.co.com/t2x8MWW/consultant-orig.jpg",
+        "serviceName": "Networking Opportunities",
+        "category": "Offline",
+        "description": "Participate in career-focused networking events to meet industry leaders.",
+        "pricing": "$40 per event",
+        "duration": "12-15-24 6:00 PM - 8:00 PM",
+        "counselor": "Alice Williams",
+        "rating": 4.6
+       
+      },
+      {
+        "id": 6,
+        "image": "https://i.ibb.co.com/Zgrdzwz/images.jpg",
+        "serviceName": "Mock Interviews",
+        "category": "Online",
+        "description": "Simulate real interview scenarios to build your confidence and skills.",
+        "pricing": "$60 per session",
+        "duration": "Available on-demand",
+        "counselor": "David Lee",
+        "rating": 4.8
+       
+      }
+  ]
+  
+  

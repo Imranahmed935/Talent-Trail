@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../Components/Navbar/Navbar';
 import Banner from '../Components/Banner/Banner';
+import Services from '../Components/Services/Services';
 
 const Home = () => {
     return (
@@ -11,6 +12,9 @@ const Home = () => {
             <section className='lg:w-9/12 mx-auto'>
                 <Banner/>
             </section>
+            <main className='lg:w-9/12 mx-auto'>
+                <Services/>
+            </main>
         </div>
     );
 };

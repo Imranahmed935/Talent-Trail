@@ -22,8 +22,8 @@ const Banner = () => {
     </div>
     </div>
     <div className="absolute lg:left-2/4 bottom-0 flex gap-4">
-      <a href="#slide4" className="btn btn-circle">❮</a>
-      <a href="#slide2" className="btn btn-circle">❯</a>
+      <a href="#slide4" className="btn btn-circle border border-black">❮</a>
+      <a href="#slide2" className="btn btn-circle border border-black">❯</a>
     </div>
   </div>
   <div id="slide2" className="carousel-item relative w-full">
@@ -42,8 +42,8 @@ const Banner = () => {
     </div>
     </div>
     <div className="absolute lg:left-2/4 bottom-0 flex gap-4">
-      <a href="#slide1" className="btn btn-circle">❮</a>
-      <a href="#slide3" className="btn btn-circle">❯</a>
+      <a href="#slide1" className="btn btn-circle border border-black">❮</a>
+      <a href="#slide3" className="btn btn-circle border border-black">❯</a>
     </div>
   </div>
   <div id="slide3" className="carousel-item relative w-full">
@@ -62,8 +62,8 @@ const Banner = () => {
     </div>
     </div>
     <div className="absolute lg:left-2/4 bottom-0 flex gap-4">
-      <a href="#slide2" className="btn btn-circle">❮</a>
-      <a href="#slide4" className="btn btn-circle">❯</a>
+      <a href="#slide2" className="btn btn-circle border border-black">❮</a>
+      <a href="#slide4" className="btn btn-circle border border-black">❯</a>
     </div>
   </div>
 </div>
