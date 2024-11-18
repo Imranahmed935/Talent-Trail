@@ -1,5 +1,7 @@
 import React from 'react';
 import student from '../../assets/after-10th.png'
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const ClassTen = () => {
     return (
@@ -24,7 +26,7 @@ const ClassTen = () => {
                         <h2>Know about 1000+ career options associated with each streams. Discuss and plan your career in more depth</h2>
                     </div>
                 </div>
-                <div className='w-7/12 ml-16'><img src={student} alt="" /></div>
+                <div className='w-7/12 ml-16'data-aos="fade-down-left"><img src={student} alt="" /></div>
                 <div className='space-y-16 lg:ml-10'>
                     <div>
                         <h3 className='text-2xl'>KNOW NEW AGE CAREERS

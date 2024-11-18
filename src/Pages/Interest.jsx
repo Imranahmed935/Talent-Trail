@@ -1,9 +1,14 @@
 import React from 'react';
 import Navbar from '../Components/Navbar/Navbar';
+import { Helmet } from 'react-helmet';
+import Footer from '../Components/Footer/Footer';
 
 const Interest = () => {
     return (
         <div>
+            <Helmet>
+                <title>talent trail | Interest test </title>
+            </Helmet>
             <nav className='lg:w-9/12 mx-auto py-6'>
              <Navbar/>
            </nav>
@@ -43,6 +48,9 @@ const Interest = () => {
             </div>
             
            </div>
+           <footer className='mt-24'>
+            <Footer/>
+           </footer>
         </div>
     );
 };

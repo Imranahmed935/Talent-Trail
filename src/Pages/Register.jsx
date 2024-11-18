@@ -12,16 +12,16 @@ const Register = () => {
 
   const signInWithGoogle = () => {
     handleGoogle()
-      .then((result) => {
-        console.log(result);
+      .then(() => {
         toast.success('Google Sign-In Successful!');
         navigate('/');
       })
       .catch((error) => {
-        console.error(error);
         toast.error(error.message || 'Google Sign-In Failed.');
       });
   };
+ 
+  
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -30,9 +30,17 @@ const Register = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
+    const regValidate = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{6,16}$/;
+
+    if (!regValidate.test(password)) {
+        toast.error(
+            'Password must contain at least one uppercase letter, one lowercase letter, one digit, one special character, and be 6-16 characters long without spaces.'
+            );
+            return;
+    } 
+
     createUserWithEmail(email, password)
-      .then((result) => {
-        console.log(result.user);
+      .then(async ()=> {
         toast.success('Registration Successful!');
         navigate('/');
         const data = {
@@ -40,17 +48,14 @@ const Register = () => {
           photoURL: photo,
         };
 
-        return updateProfile(auth.currentUser, data)
-          .then(() => {
-            toast.success('Profile Updated Successfully!');
-          })
-          .catch((error) => {
-            console.error(error);
-            toast.error('Profile Update Failed: ' + error.message);
-          });
+        try {
+              await updateProfile(auth.currentUser, data);
+              toast.success('Profile Updated Successfully!');
+          } catch (error) {
+              toast.error('Profile Update Failed: ' + error.message);
+          }
       })
       .catch((error) => {
-        console.error(error);
         toast.error(error.message || 'Registration Failed.');
       });
   };
@@ -60,7 +65,7 @@ const Register = () => {
       <nav className='lg:w-9/12 mx-auto py-6'>
         <Navbar />
       </nav>
-      <div className="hero py-24">
+      <div className="hero py-24 ">
         <div className="flex-col">
           <div className="text-center lg:text-left">
             <h1 className="text-3xl font-bold py-4 text-center mb-4">Please Register</h1>
