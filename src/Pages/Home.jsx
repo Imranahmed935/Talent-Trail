@@ -3,6 +3,7 @@ import Navbar from '../Components/Navbar/Navbar';
 import Banner from '../Components/Banner/Banner';
 import Services from '../Components/Services/Services';
 import ClassTen from '../Components/ClassTen/ClassTen';
+import About from '../Components/About/About';
 
 const Home = () => {
     return (
@@ -16,7 +17,9 @@ const Home = () => {
             <main className='lg:w-9/12 mx-auto'>
                 <Services/>
                 <ClassTen/>
+                <About/>
             </main>
+
         </div>
     );
 };
