@@ -21,9 +21,9 @@ const Details = () => {
 
   return (
     <div>
-      <nav className='lg:w-9/12 mx-auto py-6'>
+      {/* <nav className='lg:w-9/12 mx-auto py-6'>
         <Navbar />
-      </nav>
+      </nav> */}
       <div className="card p-2 lg:w-9/12 mx-auto">
         <figure>
           <img src={image} className='lg:w-1/2 w-full h-60' alt="Service" />

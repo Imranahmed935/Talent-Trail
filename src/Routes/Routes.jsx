@@ -4,6 +4,8 @@ import ErrorPage from "../Pages/ErrorPage";
 import Home from "../Pages/Home";
 import Details from "../Components/Details/Details";
 import Interest from "../Pages/Interest";
+import Register from "../Pages/Register";
+import Login from "../Pages/Login";
 
 const router = createBrowserRouter([
     {
@@ -20,6 +22,14 @@ const router = createBrowserRouter([
     {
         path:'/interest',
         element:<Interest/>
+    },
+    {
+        path:'/register',
+        element:<Register/>
+    },
+    {
+        path:'/login',
+        element:<Login/>
     },
     {
         path:'/details/:id',
