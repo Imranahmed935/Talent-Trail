@@ -19,9 +19,9 @@ const Service = ({service}) => {
     <p>counselor: {counselor}</p>
     <p>Price: {pricing}</p>
     <p>rating: {rating}</p>
-    <Link to={`/details/${id}`} className=' bg-gray-300 px-4 rounded-lg'>Learn more</Link>
+    <Link to={`/details/${id}`} className=' border border-black px-4 rounded-lg'>Learn more</Link>
   </div>
-   
+  
 </div>
     );
 };
