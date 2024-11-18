@@ -1,8 +1,40 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Navbar from '../Components/Navbar/Navbar';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../AuthProvider/AuthProvider';
+import toast from 'react-hot-toast';
 
 const Login = () => {
+    const {signInWithEmail,handleGoogle} = useContext(AuthContext)
+    const navigate = useNavigate()
+
+
+    const signInWithGoogle = ()=>{
+        handleGoogle()
+        .then(result =>{
+            console.log(result.user)
+            navigate('/')
+            toast.success('Successfully loggedIn')
+        })
+        .then(error =>{
+            console.log(error.message)
+            toast.error(error.message)
+        })
+    }
+
+    const handleLogin = (e)=>{
+        e.preventDefault();
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        signInWithEmail(email, password)
+        .then((result)=>{
+            console.log(result.user)
+            navigate('/')
+        })
+        .then((error)=>{
+            console.log(error)
+        })
+    }
     return (
         <div>
             <nav className='lg:w-9/12 mx-auto py-6'>
@@ -14,7 +46,7 @@ const Login = () => {
       <h1 className="text-3xl font-bold py-4 text-center mb-4">Please Login </h1>
     </div>
     <div className="lg:w-[500px] w-full bg-base-300 p-10">
-      <form className="">
+      <form onSubmit={handleLogin}>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
@@ -34,7 +66,7 @@ const Login = () => {
         
       </form>
       <div className="form-control mt-6">
-          <button className="btn border border-black">Login with Google</button>
+          <button onClick={signInWithGoogle} className="btn border border-black">Login with Google</button>
     </div>
     </div>
   </div>
