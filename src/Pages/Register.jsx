@@ -8,6 +8,7 @@ import toast from 'react-hot-toast';
 import { Helmet } from 'react-helmet';
 import { FaEyeSlash } from "react-icons/fa6";
 import { IoMdEye } from "react-icons/io";
+import { FaGoogle } from 'react-icons/fa';
 
 const Register = () => {
   const { createUserWithEmail, handleGoogle } = useContext(AuthContext);
@@ -145,6 +146,7 @@ const Register = () => {
             </form>
             <div className="form-control mt-6">
               <button onClick={signInWithGoogle} className="btn border border-black">
+               <FaGoogle/>
                 Login with Google
               </button>
             </div>

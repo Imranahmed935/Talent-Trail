@@ -4,7 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import toast from 'react-hot-toast';
 import { Helmet } from 'react-helmet';
-import { FaEyeSlash } from 'react-icons/fa';
+import { FaEyeSlash, FaGoogle } from 'react-icons/fa';
 import { IoMdEye } from 'react-icons/io';
 import { sendPasswordResetEmail } from 'firebase/auth';
 import auth from '../Firebase/firebase.init';
@@ -117,6 +117,7 @@ const Login = () => {
               <button
                 onClick={signInWithGoogle}
                 className="btn border border-black">
+                <FaGoogle/>
                 Login with Google
               </button>
             </div>
