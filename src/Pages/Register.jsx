@@ -27,7 +27,6 @@ const Register = () => {
   };
  
   
-
   const handleRegister = (e) => {
     e.preventDefault();
     const name = e.target.name.value;

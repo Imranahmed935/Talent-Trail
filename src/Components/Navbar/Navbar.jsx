@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import toast from 'react-hot-toast';
 
 const Navbar = () => {
   const { user, handleSignOut } = useContext(AuthContext);
@@ -8,10 +9,10 @@ const Navbar = () => {
   const handleSignOutForm = () => {
     handleSignOut()
       .then(() => {
-        console.log('success');
+        toast.success('signout Successful!');
       })
       .catch(error => {
-        console.log(error);
+        toast.error(error.message || 'signout Failed.');
       });
   };
 
