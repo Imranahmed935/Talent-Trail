@@ -15,9 +15,8 @@ const Banner = () => {
 
   return (
     <div className="carousel w-full lg:h-[600px]">
-      <div id="slide1" className="carousel-item relative w-full">
+      <div id="slide1" className="carousel-item relative w-full space-y-4">
         <div className="lg:flex justify-center items-center">
-      
           <div
             className="lg:w-1/2 px-2 space-y-2"
             data-aos="fade-right" 
@@ -30,7 +29,6 @@ const Banner = () => {
             <p className="text-xl">Discover Your Talent and Passion Scientifically.</p>
             <button className="btn btn-neutral rounded-none">Get Started</button>
           </div>
-      
           <div className="lg:w-1/2 px-2">
             <img
               src={pic1}
@@ -39,7 +37,7 @@ const Banner = () => {
             />
           </div>
         </div>
-        <div className="absolute lg:left-2/4 bottom-0 flex gap-4">
+        <div className="absolute lg:left-2/4 left-40 bottom-0 flex gap-4">
           <a href="#slide3" className="btn btn-circle border border-black">❮</a>
           <a href="#slide2" className="btn btn-circle border border-black">❯</a>
         </div>
@@ -69,7 +67,7 @@ const Banner = () => {
             />
           </div>
         </div>
-        <div className="absolute lg:left-2/4 bottom-0 flex gap-4">
+        <div className="absolute lg:left-2/4 left-40 bottom-0 flex gap-4">
           <a href="#slide1" className="btn btn-circle border border-black">❮</a>
           <a href="#slide3" className="btn btn-circle border border-black">❯</a>
         </div>
@@ -99,7 +97,7 @@ const Banner = () => {
             />
           </div>
         </div>
-        <div className="absolute lg:left-2/4 bottom-0 flex gap-4">
+        <div className="absolute lg:left-2/4 left-40 bottom-0 flex gap-4">
           <a href="#slide2" className="btn btn-circle border border-black">❮</a>
           <a href="#slide1" className="btn btn-circle border border-black">❯</a>
         </div>

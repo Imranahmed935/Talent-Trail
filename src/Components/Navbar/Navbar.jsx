@@ -20,7 +20,7 @@ const Navbar = () => {
       <li><NavLink to={'/'}>Home</NavLink></li>
      {
      
-       user && <div className='flex'>
+       user && <div className='lg:flex'>
         <li><NavLink to={'/profile'}>My Profile</NavLink></li>
         <li><NavLink to={'/interest'}>Interest Test</NavLink></li>
        </div>

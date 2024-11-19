@@ -5,6 +5,7 @@ import { AuthContext } from '../AuthProvider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 import auth from '../Firebase/firebase.init';
 import toast from 'react-hot-toast';
+import Footer from '../Components/Footer/Footer';
 
 const Profile = () => {
     const { user, setUser } = useContext(AuthContext); 
@@ -79,6 +80,9 @@ const Profile = () => {
                     </div>
                 </form>
             </div>
+            <footer className='mt-24'>
+                <Footer/>
+            </footer>
         </div>
     );
 };

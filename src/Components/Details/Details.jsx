@@ -1,6 +1,7 @@
 import { useLoaderData, useLocation, useParams } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import { useRef, useState } from 'react';
+import Footer from '../Footer/Footer';
 
 const Details = () => {
   const [comments, setComments] = useState([]); 
@@ -41,16 +42,16 @@ const Details = () => {
       </div>
       <div className='lg:w-1/2 mx-auto lg:py-24'>
         <h1 className='text-center text-3xl font-bold'>How was your experience?</h1>
-        <div className='py-6 ml-32'>
+        <div className='py-6 lg:ml-32 px-2'>
           <input 
             ref={commentRef} 
-            className='bg-gray-200 border border-black outline-none p-2 w-3/4' 
+            className='bg-gray-200 border border-black outline-none p-2 lg:w-3/4 w-full' 
             type="text" 
             placeholder='Share your experience...' 
           />
           <button 
             onClick={handleComment} 
-            className='btn btn-neutral rounded-none'>
+            className='btn btn-neutral lg:ml-0 ml-40 mt-2 rounded-none'>
             Comment
           </button>
         </div>
@@ -63,6 +64,9 @@ const Details = () => {
           </ul>
         </div>
       </div>
+      <footer className='mt-24'>
+       <Footer/>
+     </footer>
     </div>
   );
 };
