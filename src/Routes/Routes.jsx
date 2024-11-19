@@ -6,6 +6,8 @@ import Details from "../Components/Details/Details";
 import Interest from "../Pages/Interest";
 import Register from "../Pages/Register";
 import Login from "../Pages/Login";
+import Profile from "../Pages/Profile";
+import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -33,8 +35,12 @@ const router = createBrowserRouter([
     },
     {
         path:'/details/:id',
-        element:<Details/>,
+        element:<PrivateRoute><Details/></PrivateRoute>,
         loader:()=> fetch('../data.json')
+    },
+    {
+        path:'/profile',
+        element:<PrivateRoute><Profile/></PrivateRoute>
     }
 ])
 

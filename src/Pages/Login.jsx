@@ -1,18 +1,20 @@
 import React, { useContext } from 'react';
 import Navbar from '../Components/Navbar/Navbar';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import toast from 'react-hot-toast';
+import { Helmet } from 'react-helmet';
 
 const Login = () => {
   const { signInWithEmail, handleGoogle } = useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const signInWithGoogle = () => {
     handleGoogle()
       .then(() => {
         toast.success('Google Sign-In Successful!');
-        navigate('/');
+        navigate(location.state ? location.state : '/');
       })
       .catch((error) => {
         toast.error(error.message || 'Google Sign-In Failed.');
@@ -27,7 +29,7 @@ const Login = () => {
     signInWithEmail(email, password)
       .then(() => {
         toast.success('Login Successful!');
-        navigate('/');
+        navigate(location.state ? location.state : '/');
       })
       .catch((error) => {
         toast.error(error.message || 'Login Failed.');
@@ -36,6 +38,9 @@ const Login = () => {
 
   return (
     <div>
+      <Helmet>
+      <title>talent trail | login </title>
+      </Helmet>
       <nav className="lg:w-9/12 mx-auto py-6">
         <Navbar />
       </nav>

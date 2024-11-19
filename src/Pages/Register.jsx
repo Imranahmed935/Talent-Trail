@@ -5,6 +5,7 @@ import { AuthContext } from '../AuthProvider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 import auth from '../Firebase/firebase.init';
 import toast from 'react-hot-toast';
+import { Helmet } from 'react-helmet';
 
 const Register = () => {
   const { createUserWithEmail, handleGoogle } = useContext(AuthContext);
@@ -62,6 +63,9 @@ const Register = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>talent trail | register </title>
+      </Helmet>
       <nav className='lg:w-9/12 mx-auto py-6'>
         <Navbar />
       </nav>

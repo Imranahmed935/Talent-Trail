@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from 'react-router-dom';
+import { useLoaderData, useLocation, useParams } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import { useRef, useState } from 'react';
 
