@@ -18,9 +18,12 @@ const Navbar = () => {
   const links = (
     <>
       <li><NavLink to={'/'}>Home</NavLink></li>
-      <li><NavLink to={'/interest'}>Interest Test</NavLink></li>
      {
-       user && <li><NavLink to={'/profile'}>My Profile</NavLink></li>
+     
+       user && <div className='flex'>
+        <li><NavLink to={'/profile'}>My Profile</NavLink></li>
+        <li><NavLink to={'/interest'}>Interest Test</NavLink></li>
+       </div>
      }
     </>
   );

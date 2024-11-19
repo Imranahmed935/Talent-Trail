@@ -23,7 +23,7 @@ const router = createBrowserRouter([
     },
     {
         path:'/interest',
-        element:<Interest/>
+        element:<PrivateRoute><Interest/></PrivateRoute>
     },
     {
         path:'/register',

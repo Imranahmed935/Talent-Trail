@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Navbar from '../Components/Navbar/Navbar';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
@@ -6,9 +6,12 @@ import { updateProfile } from 'firebase/auth';
 import auth from '../Firebase/firebase.init';
 import toast from 'react-hot-toast';
 import { Helmet } from 'react-helmet';
+import { FaEyeSlash } from "react-icons/fa6";
+import { IoMdEye } from "react-icons/io";
 
 const Register = () => {
   const { createUserWithEmail, handleGoogle } = useContext(AuthContext);
+  const [showPassword, setPassword] = useState(true);
   const navigate = useNavigate();
 
   const signInWithGoogle = () => {
@@ -61,6 +64,10 @@ const Register = () => {
       });
   };
 
+  const handleIcon = ()=>{
+    setPassword(!showPassword)
+  }
+
   return (
     <div>
       <Helmet>
@@ -112,18 +119,20 @@ const Register = () => {
                   required
                 />
               </div>
-              <div className="form-control">
+              <div className="form-control relative">
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
                 <input
-                  type="password"
+                  type={showPassword ? 'password': 'text'}
                   name="password"
                   placeholder="Password"
-                  className="input input-bordered"
+                  className="input input-bordered "
                   required
                 />
+                <p onClick={handleIcon} className='absolute cursor-pointer right-4 text-xl top-12'>{showPassword ? <FaEyeSlash/>: <IoMdEye/>}</p>
               </div>
+               
               <div className="form-control mt-6">
                 <button className="btn btn-neutral">Register</button>
                 <p>

@@ -36,7 +36,7 @@ const Profile = () => {
     };
 
     return (
-        <div>
+        <div className='px-2'>
             <Helmet>
                 <title>Talent Trail | My Profile</title>
             </Helmet>
@@ -44,7 +44,7 @@ const Profile = () => {
                 <Navbar />
             </nav>
             <div className="lg:w-4/12 mx-auto border border-black p-10 space-y-2 text-center">
-                <img className="w-20 h-20 ml-60 rounded-full" src={user?.photoURL} alt="Profile" />
+                <img className="w-20 h-20 lg:ml-60 ml-32 rounded-full" src={user?.photoURL} alt="Profile" />
                 <h1>Name: {user?.displayName}</h1>
                 <h1>Email: {user?.email}</h1>
             </div>
