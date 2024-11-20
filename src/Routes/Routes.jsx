@@ -18,7 +18,8 @@ const router = createBrowserRouter([
             {
                 path:'/',
                 element:<Home/>
-            },
+            }
+            
         ]
     },
     {
@@ -42,6 +43,8 @@ const router = createBrowserRouter([
         path:'/profile',
         element:<PrivateRoute><Profile/></PrivateRoute>
     }
+    
+   
 ])
 
 export default router;

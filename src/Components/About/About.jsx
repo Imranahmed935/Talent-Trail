@@ -3,8 +3,10 @@ import { FaUserGraduate } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 
+
 const About = () => {
     return (
+       <>
         <div className='lg:border'>
            <h1 className='text-4xl font-bold text-center py-10 underline'>Who are we ?</h1>
            <div className='lg:w-8/12 mx-auto'>
@@ -32,6 +34,7 @@ const About = () => {
            </div>
            <p className='text-2xl lg:w-8/12 mx-auto text-center py-6'>Our mission is, to have more than 10,000+ professionally trained career counsellors in across bangladesh by 2025.</p>
         </div>
+       </>
     );
 };
 

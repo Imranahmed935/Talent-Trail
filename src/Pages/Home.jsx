@@ -16,7 +16,7 @@ const Home = () => {
            <nav className='lg:w-9/12 mx-auto py-6'>
              <Navbar/>
            </nav>
-            <section className='lg:w-9/12 mx-auto'>
+            <section className='lg:w-9/12 h-[600px] mx-auto'>
                 <Banner/>
             </section>
             <main className='lg:w-9/12 mx-auto'>

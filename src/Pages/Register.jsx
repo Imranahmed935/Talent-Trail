@@ -9,6 +9,7 @@ import { Helmet } from 'react-helmet';
 import { FaEyeSlash } from "react-icons/fa6";
 import { IoMdEye } from "react-icons/io";
 import { FaGoogle } from 'react-icons/fa';
+import Footer from '../Components/Footer/Footer';
 
 const Register = () => {
   const { createUserWithEmail, handleGoogle } = useContext(AuthContext);
@@ -152,6 +153,9 @@ const Register = () => {
           </div>
         </div>
       </div>
+      <footer className='mt-24'>
+       <Footer/>
+     </footer>
     </div>
   );
 };

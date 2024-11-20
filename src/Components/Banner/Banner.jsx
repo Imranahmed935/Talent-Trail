@@ -63,7 +63,7 @@ const Banner = () => {
             <img
               src={pic2}
               data-aos="flip-left" 
-              className="w-full border border-black rounded-full"
+              className="w-full border border-green-400 rounded-full"
             />
           </div>
         </div>
@@ -93,7 +93,7 @@ const Banner = () => {
             <img
               src={pic3}
               data-aos="zoom-out" 
-              className="w-full border border-black rounded-full"
+              className="w-full border border-purple-600 rounded-full"
             />
           </div>
         </div>

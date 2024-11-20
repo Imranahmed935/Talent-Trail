@@ -8,6 +8,7 @@ import { FaEyeSlash, FaGoogle } from 'react-icons/fa';
 import { IoMdEye } from 'react-icons/io';
 import { sendPasswordResetEmail } from 'firebase/auth';
 import auth from '../Firebase/firebase.init';
+import Footer from '../Components/Footer/Footer';
 
 const Login = () => {
   const { signInWithEmail, handleGoogle } = useContext(AuthContext);
@@ -124,6 +125,9 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <footer className='mt-24'>
+       <Footer/>
+     </footer>
     </div>
   );
 };
