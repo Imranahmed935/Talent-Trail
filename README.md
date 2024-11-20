@@ -1,7 +1,8 @@
 # **Talent Trail**
 
 **Your Trusted Guide for Career Planning and Growth**  
-[Live Site URL](https://your-live-site-url.com)  
+[Visit Live Site](https://talent-trail-e14ba.web.app/)
+
 
 ---
 
